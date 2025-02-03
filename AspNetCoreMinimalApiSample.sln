@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetcore-minimal-api-sample", "aspnetcore-minimal-api-sample\aspnetcore-minimal-api-sample.csproj", "{12F24F7B-E95A-4CF4-BE85-AEA6C7983AAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreMinimalApiSample", "AspNetCoreMinimalApiSample\AspNetCoreMinimalApiSample.csproj", "{12F24F7B-E95A-4CF4-BE85-AEA6C7983AAE}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2B129344-C1D6-4483-B1AF-8DC819FA51EB}"
 EndProject

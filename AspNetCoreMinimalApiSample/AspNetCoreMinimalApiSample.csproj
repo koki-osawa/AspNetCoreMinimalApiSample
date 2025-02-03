@@ -4,9 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>aspnetcore_minimal_api_sample</RootNamespace>
+    <RootNamespace>AspNetCoreMinimalApiSample</RootNamespace>
     <UserSecretsId>5ebcdb49-978d-4d32-8fd7-69fb91d4841c</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>

@@ -7,7 +7,7 @@
     <ProjectGuid>2b129344-c1d6-4483-b1af-8dc819fa51eb</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>aspnetcore-minimal-api-sample</DockerServiceName>
+    <DockerServiceName>AspNetCoreMinimalApiSample</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

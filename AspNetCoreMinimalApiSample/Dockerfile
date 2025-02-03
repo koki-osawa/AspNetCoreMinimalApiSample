@@ -12,19 +12,19 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["aspnetcore-minimal-api-sample/aspnetcore-minimal-api-sample.csproj", "aspnetcore-minimal-api-sample/"]
-RUN dotnet restore "./aspnetcore-minimal-api-sample/aspnetcore-minimal-api-sample.csproj"
+COPY ["AspNetCoreMinimalApiSample/AspNetCoreMinimalApiSample.csproj", "AspNetCoreMinimalApiSample/"]
+RUN dotnet restore "./AspNetCoreMinimalApiSample/AspNetCoreMinimalApiSample.csproj"
 COPY . .
-WORKDIR "/src/aspnetcore-minimal-api-sample"
-RUN dotnet build "./aspnetcore-minimal-api-sample.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/AspNetCoreMinimalApiSample"
+RUN dotnet build "./AspNetCoreMinimalApiSample.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # このステージは、最終ステージにコピーするサービス プロジェクトを公開するために使用されます
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./aspnetcore-minimal-api-sample.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./AspNetCoreMinimalApiSample.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # このステージは、運用環境または VS から通常モードで実行している場合に使用されます (デバッグ構成を使用しない場合の既定)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "aspnetcore-minimal-api-sample.dll"]
+ENTRYPOINT ["dotnet", "AspNetCoreMinimalApiSample.dll"]
