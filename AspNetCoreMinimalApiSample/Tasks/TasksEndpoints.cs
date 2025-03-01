@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-namespace aspnetcore_minimal_api_sample.Tasks
+namespace AspNetCoreMinimalApiSample.Tasks
 {
     public static class TasksEndpoints
     {
