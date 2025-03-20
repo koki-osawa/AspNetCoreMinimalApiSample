@@ -1,6 +1,0 @@
-services:
-  AspNetCoreMinimalApiSample:
-    image: ${DOCKER_REGISTRY-}aspnetcoreminimalapisample
-    build:
-      context: .
-      dockerfile: AspNetCoreMinimalApiSample/Dockerfile
