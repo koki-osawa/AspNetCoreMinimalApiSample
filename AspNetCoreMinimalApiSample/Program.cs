@@ -8,6 +8,12 @@ builder.Services.AddDbContext<TaskDb>(options =>
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<TaskDb>();
+    db.Database.EnsureCreated();
+}
+
 app.MapGet("/", () => "Hello World!");
 
 app.RegisterTasksEndpoints();
